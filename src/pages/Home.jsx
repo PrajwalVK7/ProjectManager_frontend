@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
@@ -27,7 +27,7 @@ function Home() {
             if (response.status === 201) {
                 alert("Success")
                 setUser(response.data)
-                console.log(data)
+                // console.log(data)
             }
         }
 
@@ -47,8 +47,8 @@ function Home() {
     
             if (response.status === 200) {
                 const { data } = response;
-                console.log("data from ser")
-                    console.log(data)
+                // console.log("data from ser")
+                //     console.log(data)
     
                 const { email, password } = loginData;
                 const user = response.data.find(user => user.email === email);

@@ -6,10 +6,8 @@ import { Link } from 'react-router-dom'
 import { displayUser } from '../services/allAPI'
 import { getProjectById } from '../services/allAPI'
 import { useParams } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom'
 function Project() {
     const userId = localStorage.getItem('userId');
-    const navigate = useNavigate()
 
     const { projectId } = useParams();
     const [isTaskUpdated, setIsTaskUpdated] = useState(false)
